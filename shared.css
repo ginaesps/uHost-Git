@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:400,900');
+@import url('https://fonts.googleapis.com/css2?family=Anton');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:400,700');
+
+
 *{
     box-sizing: border-box;
 }
@@ -29,26 +34,23 @@ main{
     padding: 0.5rem 1rem;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 5;
     top: 0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .main-header__brand{
     color: #0e4f1f;
     text-decoration: none;
     font-weight: bold;
-    height: 2.5rem;
-    display: inline-block;
     width: 1.3rem;
-    vertical-align: middle;
 }
 
 .main-header__brand img{
-    height: 100%;
-}
-
-.main-header > div{
-    display: inline-block;
+    height: 2.5rem;
     vertical-align: middle;
 }
 
@@ -61,10 +63,10 @@ main{
     padding:0;
     margin: 0;
     list-style: none;
+    display: flex;
 }
 
 .main-nav__item{
-    display: inline-block;
     margin: 0 1rem;
 }
 
@@ -136,9 +138,13 @@ main{
     width: 90%;
     height: 100%;
     list-style: none;
-    margin: 10% auto;
+    margin: 0 auto;
     padding: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mobile-nav__item{
@@ -170,6 +176,13 @@ button:focus{
     outline:none;
 }
 
+.button[disabled]{
+    cursor: not-allowed;
+    border: #a1a1a1;
+    background: #ccc;
+    color: #a1a1a1; 
+}
+
 .main-footer{
     background: black;
     padding:2rem;
@@ -180,12 +193,13 @@ button:focus{
     list-style: none;
     margin:0;
     padding:0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main-footer__link{
-    display: block;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .main-footer__link a{
@@ -212,14 +226,15 @@ button:focus{
     }
 
     .main-nav{
-        display: inline-block;
-        text-align: right;
-        width: calc(100% - 44px);
-        vertical-align: middle;
+        display: flex;
     }    
 
     .main-footer__link{
-        display: inline-block;
         margin: 0 1rem;
+    }
+
+    .main-footer__links{
+        flex-direction: row;
+        justify-content: center;
     }
 }
